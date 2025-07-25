@@ -15,3 +15,14 @@ This research project explores ETF pair trading using a combination of statistic
   - `seaborn`
 
 ## Project Directory Structure
+
+
+
+
+## Notes
+- Tickers used: `XLB`, `XLE`, `XLF`, `XLI`, `XLK`, `XLP`, `XLV`, `XLY`, `XLU`, `XLRE`, `XLC`
+- Time frame: 2010-01-01 to 2020-12-31
+- Clustering optionally tested with and without PCA for comparative analysis
+
+## Contact
+For questions or replication help, contact: [your-email@example.com]
