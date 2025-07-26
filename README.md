@@ -3,6 +3,13 @@
 ## Project Description
 This research project explores ETF pair trading using a combination of statistical filters and machine learning clustering. The aim is to identify pairs with high mean-reversion potential using cointegration tests, z-score analysis, and unsupervised clustering (K-Means) with PCA. The final goal is to evaluate which Machine Learning methods yield the most robust and profitable trading signals.
 
+## Installation
+
+```bash
+conda env create -f environment.yml
+conda activate rise-project
+```
+
 ## Software Requirements
 - Python 3.11+
 - Required libraries:
