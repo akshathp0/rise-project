@@ -1,0 +1,9 @@
+yfinance
+pandas
+statsmodels
+scikit-learn
+seaborn
+matplotlib
+numpy
+pytorch
+cpuonly
