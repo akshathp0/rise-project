@@ -1,0 +1,16 @@
+name: rise-project
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - pytorch
+  - pip
+  - pip:
+      - yfinance
