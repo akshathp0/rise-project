@@ -6,13 +6,15 @@ This research project explores ETF pair trading using a combination of statistic
 ## Software Requirements
 - Python 3.11+
 - Required libraries:
-  - `pandas`
-  - `numpy`
-  - `yfinance`
-  - `statsmodels`
-  - `scikit-learn`
-  - `matplotlib`
-  - `seaborn`
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - pytorch
+  - yfinance
+  - ipykernel
 
 ## Project Directory Structure
 

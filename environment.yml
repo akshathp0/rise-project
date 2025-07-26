@@ -12,5 +12,6 @@ dependencies:
   - statsmodels
   - pytorch
   - pip
+  - ipykernel
   - pip:
       - yfinance
