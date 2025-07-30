@@ -1,37 +1,58 @@
-# ETF Pair Trading with Statistical and Machine Learning Methods
+# 📊 ETF Pair Trading with Machine Learning
 
-## Project Description
-This research project explores ETF pair trading using a combination of statistical filters and machine learning clustering. The aim is to identify pairs with high mean-reversion potential using cointegration tests, z-score analysis, and unsupervised clustering (K-Means) with PCA. The final goal is to evaluate which Machine Learning methods yield the most robust and profitable trading signals.
+This project uses **Random Forest** to predict mean-reverting ETF pairs and simulate a trading strategy with out-of-sample testing.
 
-## Installation
+---
 
-```bash
-conda env create -f environment.yml
-conda activate rise-project
-```
+## 🚀 Overview
+- **Goal:** Identify ETF pairs that exhibit mean reversion and simulate a trading strategy.  
+- **Data:** Yahoo Finance daily prices for ETFs  
+- **Train/Test Periods:**  
+  - Train: 2015–2020  
+  - Test: 2020–2024  
 
-## Software Requirements
-- Python 3.11+
-- Required libraries:
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - scikit-learn
-  - statsmodels
-  - pytorch
-  - yfinance
-  - ipykernel
+---
 
-## Project Directory Structure
+## 🔎 Pair Selection
+We analyzed a broad list of ETFs and applied multiple **statistical tests** (cointegration, correlation, z-score distance, clustering, etc.) to identify **statistically significant pairs** likely to mean revert.  
+**Selected pairs:**  
+- IEMG / EEM  
+- ARKK / ARKW  
+- TLT / SPTL  
+- SHY / VGSH  
+- SOXX / ITA  
 
+---
 
+## 🔍 Features
+- **Spread, Z-Score, Rolling Mean, Rolling Std, Volatility**  
+- **Lag Features:** Previous 5 days of spread & z-score  
+- **Target:** Predict if z-score will move closer to 0 (mean reversion)
 
+---
 
-## Notes
-- Tickers used: `XLB`, `XLE`, `XLF`, `XLI`, `XLK`, `XLP`, `XLV`, `XLY`, `XLU`, `XLRE`, `XLC`
-- Time frame: 2010-01-01 to 2020-12-31
-- Clustering optionally tested with and without PCA for comparative analysis
+## 🧠 Models
+- **Random Forest Classifier, LSTM, XGBoost**  
+- Hyperparameter tuning with GridSearchCV  
+- Balanced class weights for handling imbalanced signals  
 
-## Contact
-For questions or replication help, contact: [your-email@example.com]
+---
+
+## 💰 Trading Simulation
+- Start **$100 per pair**  
+- Enter trades when model predicts mean reversion and |z-score| ≥ 1.5  
+- **Direction:** Short expensive ETF / Long cheap ETF  
+- Hold 5 days, then exit  
+- No overlapping trades  
+
+**Outputs:**  
+- Equity curve per pair and total portfolio  
+- Metrics: Return %, CAGR, Sharpe Ratio, Max Drawdown, Trades  
+
+---
+
+## 🛠️ Requirements
+- pandas, numpy, scikit-learn, yfinance, matplotlib, seaborn  
+- Install with:  
+  ```bash
+  pip install -r environment.yml
