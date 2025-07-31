@@ -1,7 +1,7 @@
 name: rise-project
 channels:
-  - defaults
   - conda-forge
+  - defaults
 dependencies:
   - python=3.12
   - pandas
@@ -11,6 +11,7 @@ dependencies:
   - scikit-learn
   - statsmodels
   - pytorch
+  - xgboost
   - pip
   - ipykernel
   - pip:
